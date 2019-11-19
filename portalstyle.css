@@ -17,3 +17,14 @@
     border-color: whitesmoke;
     border-width: 2px;
 }
+.btn-light {
+    border-radius: 20px;
+    border-color: black;
+    border-width: 2px;
+    font-weight: bold;
+}
+#buttonLogin{
+    border-radius: 20px;
+    border-width: 2px;
+    font-weight: bold;
+}
