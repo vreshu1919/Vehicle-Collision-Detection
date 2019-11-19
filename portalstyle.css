@@ -1,0 +1,19 @@
+.emer-button {
+    text-align: center;
+    margin-top: 20px
+}
+.card {
+    border-radius: 8px;
+    border-color: black;
+    border-width: 3px;
+    margin-top: 20px;
+}
+#nav-l{
+    margin-bottom: -50px;
+    background-color: black;
+}
+.btn-dark {
+    border-radius: 20px;
+    border-color: whitesmoke;
+    border-width: 2px;
+}
