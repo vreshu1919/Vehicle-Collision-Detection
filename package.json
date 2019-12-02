@@ -1,0 +1,32 @@
+{
+  "name": "vechile_collison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vreshu1919/Vehicle-Collision-Detection.git"
+  },
+  "author": "Aakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vreshu1919/Vehicle-Collision-Detection/issues"
+  },
+  "homepage": "https://github.com/vreshu1919/Vehicle-Collision-Detection#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.13",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
