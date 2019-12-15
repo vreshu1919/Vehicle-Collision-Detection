@@ -10,10 +10,15 @@ let session = require('express-session');
 // let bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-
-// require('./config/passport');
+require('./config/passport');
 let indexRouter = require('./routes/index');
-
+let adminLoginRouter = require('./routes/adminLogin');
+let LoginRouter = require('./routes/Login');
+let adminRegisterRouter = require('./routes/adminSignup')
+let SignupRouter = require('./routes/Signup');
+let adminDashboardRouter = require('./routes/adminDashboard');
+let DashboardRouter = require('./routes/Dashboard');
+let MailRouter = require('./routes/Mail');
 let app = express();
 
 // view engine setup
@@ -27,59 +32,56 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(expressValidator());
 app.use(cookieParser());
-app.use(session({secret: 'dog is here',resave: false,saveUninitialized: false,
-    expires: new Date(Date.now() + (30 * 86400 * 1000))}));
+app.use(session({
+	secret: 'dog is here', resave: false, saveUninitialized: false,
+	expires: new Date(Date.now() + (30 * 86400 * 1000))
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'semantic')));
-app.use(express.static(path.join(__dirname, 'node_modules/@glidejs/glide/dist')));
 if (app.get('env') === 'development') {
-    app.locals.pretty = true;
+	app.locals.pretty = true;
 }
 
 app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-// app.use('/StartupSignup',starupSignup);
-// app.use('/InvestorSignup',investorSignup);
-// app.use('/login',Login);
-// app.use('/investorList',investorList);
-// app.use('/startupList',startupList);
-// app.use('/StartupDashboard',StartupDashboard);
-// app.use('/InvestorDashboard',InvestorDashboard);
-// app.use('/notification',notifications);
-// app.use('/StartupProfile',StartupProfile);
-// app.use('/InvestorProfile',InvestorProfile);
+app.use('/admin', adminLoginRouter);
+app.use('/login',LoginRouter);
+app.use('/adminSignup', adminRegisterRouter);
+app.use('/Signup', SignupRouter);
+app.use('/adminDashboard', adminDashboardRouter);
+app.use('/dashboard', DashboardRouter);
+app.use('/mail',MailRouter);
+
 // app.use('/UnderConstruction', ()=> {
 //     res.render('Under Construction', { title: 'Under Construction'});
 // });
 
-// app.get('/logout', function(req, res){
-//     req.logout();
-//     res.redirect('/');
-// });
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+});
 
-// app.use('/success', function(req, res){
-//     console.log("sent");
-//     res.send(req.user);
-// });
+app.use('/success', function(req, res){
+    console.log("User Sent");
+    res.send(req.user);
+});
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  let err = new Error('Not Found');
-  err.status = 404;
-  res.render('404 Not found');
+app.use(function (req, res, next) {
+	let err = new Error('Not Found');
+	err.status = 404;
+	next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+app.use(function (err, req, res, next) {
+	// set locals, only providing error in development
+	res.locals.message = err.message;
+	res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+	// render the error page
+	res.status(err.status || 500);
+	res.render('error');
 });
 
 module.exports = app;

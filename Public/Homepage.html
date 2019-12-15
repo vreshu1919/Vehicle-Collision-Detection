@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="portalstyle.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/portalstyle.css">
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -42,7 +42,7 @@ body, html {
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
             <div class="col-md-6">
-                <a class="navbar-brand" href="#home" style="font-weight: bold;"><img src="download.png" height="45px" width="55px">&nbsp;Accident Detection System</a>
+                <a class="navbar-brand" href="#home" style="font-weight: bold;"><img src="./assets/img/download.png" height="45px" width="55px">&nbsp;Accident Detection System</a>
             </div>
             <div class="col-md-1">
                 <a href="#about"><button type="button" class="btn btn-light">About Us</button></a>
@@ -73,24 +73,23 @@ body, html {
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" action="/login" method="POST">
                     <div class="form-group">
-                        <label for="uname1" style="font-weight: bolder; font-size: 18px;">Username</label>
-                        <input type="text" class="form-control form-control-lg" name="uname1" id="uname1" required="">
+                        <label for="uname1" style="font-weight: bolder; font-size: 18px;">Email</label>
+                        <input type="text" class="form-control form-control-lg" name="Email" id="uname1" required="">
                         <div class="invalid-feedback">Oops, you missed this one.</div>
                     </div>
                     <div class="form-group">
                         <label style="font-weight: bolder; font-size: 18px;">Password</label>
-                        <input type="password" class="form-control form-control-lg" id="pwd1" required="" autocomplete="new-password">
+                        <input type="password" class="form-control form-control-lg" id="pwd1" required="" name="Password" autocomplete="new-password">
                         <div class="invalid-feedback">Enter your password too!</div>
                     </div>
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="rememberMe">
-                      <label class="custom-control-label" for="rememberMe">Remember me on this computer</label>
+                      <p>Not an existing user?<a href="/Registration.html">&nbsp;<span style="color:blue;">Sign Up</span></a></p>
                     </div>
                     <div class="form-group py-4">
                         <button class="btn btn-lg btn-light" data-dismiss="modal" aria-hidden="true">Cancel</button>
-                        <a href="portal.html"><button type="button" class="btn btn-success btn-lg float-right" id="buttonLogin" href="#">Login</button></a>
+                        <button type="submit" class="btn btn-success btn-lg float-right" id="buttonLogin">Login</button>
                     </div>
                 </form>
             </div>
@@ -188,7 +187,7 @@ body, html {
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="reshu.jpg" alt="John" style="width:100%">
+        <img src="./assets/img/reshu.jpg" alt="John" style="width:100%">
         <div class="w3-container">
           <h3 style="font-weight:bolder;">Reshu Verma</h3>
           <p class="w3-opacity">CEO & Founder</p>
@@ -218,7 +217,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="bhargav.jpg" alt="Jane" style="width:100%">
+        <img src="./assets/img/bhargav.jpg" alt="Jane" style="width:100%">
         <div class="w3-container">
           <h3 style="font-weight:bolder;">Bhargavram Khyathi</h3>
           <p class="w3-opacity">Frontend Expert</p>
@@ -248,7 +247,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="aakash.jpg" alt="Mike" style="width:100%">
+        <img src="./assets/img/aakash.jpg" alt="Mike" style="width:100%">
         <div class="w3-container">
           <h3 style="font-weight:bolder;">Aakash Kumar Goryan</h3>
           <p class="w3-opacity">Machine Learning Expert</p>
@@ -278,7 +277,7 @@ body, html {
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-card">
-        <img src="saurabh.jpg" alt="Dan" style="width:100%">
+        <img src="./assets/img/saurabh.jpg" alt="Dan" style="width:100%">
         <div class="w3-container">
           <h3 style="font-weight:bolder;">Saurabh Goel</h3>
           <p class="w3-opacity">Backend Expert</p>
@@ -480,7 +479,7 @@ body, html {
       </p>
     </form>
     <!-- Image of location/map -->
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    <img src="./assets/img/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>
 </div>
 

@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <title>Homepage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="portalstyle.css">
-    <script src="javaScript.js"></script>
-
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/portalstyle.css">
+    <!-- <script src="javaScript.js"></script> -->
+    <!-- <script src="./assets/js/Mail.js"></script> -->
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="nav-l">
-    <a class="navbar-brand" href="#"><img src="download.png" height="45px" width="55px">&nbsp;Surveillance Portal</a>
+    <a class="navbar-brand" href="#"><img src="./assets/img/download.png" height="45px" width="55px">&nbsp;User Portal</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,7 +38,7 @@
 </nav>
 <div class="jumbotron">
         <div class="heading" style="padding: 20px;">
-                <h3 align="center">Welcome **Name**</h1>
+                <h3 align="center">Welcome to your dashboard</h1>
             </div>
     <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -46,22 +46,28 @@
                 <div class="card-body">
                     <h5 class="card-title" align="center">Camera 1</h5>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1EiC9bvVGnk?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/7ZAa8ZCxjdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
                     </div>
                     <div class="emer-button">
-                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong">Emergency</a>
+                        <button class="btn btn-danger text-uppercase" id="myButton1" type="button" data-toggle="modal" data-target="#exampleModalLong">Emergency<br></button>
+                        <!-- <button class="btn btn-danger text-uppercase" id="myButton1" type="button">Emergency<br></button> -->
+                        <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong" id="myButton1">Emergency</a> -->
                     </div>
                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Accident at Camera 1!</h5>
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Accident at this Camera Site</h5>
+                                    
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-
+                                    <h6> YOUR LOCATION - NSIT </h6>
+                                    <h6> NEAREST HOSPITAL - Tarak Hospital India pvt ltd.</h6>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -77,10 +83,15 @@
                 <div class="card-body">
                     <h5 class="card-title" align="center">Camera 2</h5>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bpEWuoweQo8?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/K4jY8zCVs9c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                        <!-- <h6>Nearest hosptital -z</h6> -->
                     </div>
                     <div class="emer-button">
-                        <a href="#" class="btn btn-danger">Emergency</a>
+                        <button class="btn btn-danger text-uppercase" id="myButton2" type="button" data-toggle="modal" data-target="#exampleModalLong">Emergency<br></button>
+                        <!-- <a href="/mail" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong">Emergency</a> -->
+                        <!-- /<a href="#" class="btn btn-danger">Emergency</a> -->
                     </div>
                 </div>
             </div>
@@ -92,10 +103,15 @@
                 <div class="card-body">
                     <h5 class="card-title" align="center">Camera 3<h5>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KGEekP1102g?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/oFwxlk7WtCs?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
                     </div>
                     <div class="emer-button">
-                        <a href="#" class="btn btn-danger">Emergency</a>
+                        <button class="btn btn-danger text-uppercase" id="myButton3" type="button" data-toggle="modal" data-target="#exampleModalLong">Emergency<br></button>
+                        <!-- <button class="btn btn-danger text-uppercase" id="myButton3" type="button">Emergency<br></button> -->
+                        <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong" id="myButton3">Emergency</a> -->
+                        <!-- <a href="#" class="btn btn-danger">Emergency</a> -->
                     </div>
                 </div>
             </div>
@@ -105,16 +121,23 @@
                 <div class="card-body">
                     <h5 class="card-title" align="center">Camera 4</h5>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/K4jY8zCVs9c?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
                     </div>
                     <div class="emer-button">
-                        <a href="#" class="btn btn-danger">Emergency</a>
+                        <button class="btn btn-danger text-uppercase" id="myButton4" type="button" data-toggle="modal" data-target="#exampleModalLong">Emergency<br></button>
+                        <!-- <button class="btn btn-danger text-uppercase" id="myButton4" type="button">Emergency<br></button> -->
+                        <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalLong" id="myButton4">Emergency</a> -->
+                        <!-- <a href="#" class="btn btn-danger">Emergency</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script src="assets/js/Mail.js"></script>
 </body>
 </html>
